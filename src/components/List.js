@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class List extends Component {
   state = {};
-
+  // render props data in displayed list
   render() {
     return (
       <div className="list">
