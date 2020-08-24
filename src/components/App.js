@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Header from "./Header";
 import List from "./List";
+import Form from "./Form";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
         {/* <Route path="/" component={Header} /> */}
         <Route path="/">
           <Header />
-          <List />
+          {/* <List /> */}
+          <Form />
         </Route>
       </Switch>
     </>

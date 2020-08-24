@@ -1,20 +1,22 @@
-import React from "react";
-import list_items from "../List_Items";
-import Items from "./Items";
+import React, { Component } from "react";
 
-function List() {
-  return (
-    <div className="list">
-      {list_items.map((item) => (
+class List extends Component {
+  state = {};
+
+  render() {
+    return (
+      <div className="list">
         <div className="kind">
-          <h2 className="list_title">{item.kind}</h2>
+          <h2 className="list_title">{this.props.newlist.kind}</h2>
           <ul>
-            <Items product={item.products} />
+            {this.props.newlist.list.map((item) => (
+              <li>{item}</li>
+            ))}
           </ul>
         </div>
-      ))}
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 export default List;
