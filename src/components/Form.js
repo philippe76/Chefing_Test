@@ -34,7 +34,7 @@ class Form extends Component {
   render() {
     return (
       <>
-        <form action="">
+        <form>
           <label>What list do you want to write?</label>
           <select name="kind" id="kind-select" onChange={this.handleChange}>
             <option value="fruits">fruits</option>
@@ -53,7 +53,8 @@ class Form extends Component {
           </button>
         </form>
         {/* add state infos to child component */}
-        <List newlist={this.state} />
+        {/* do not display if list array is empty */}
+        {this.state.list[0] ? <List newlist={this.state} /> : null}
       </>
     );
   }
