@@ -54,7 +54,8 @@ class Form extends Component {
         </form>
         {/* add state infos to child component */}
         {/* do not display if list array is empty */}
-        {this.state.list[0] ? <List newlist={this.state} /> : null}
+        {/* {this.state.list[0] ? <List newlist={this.state} /> : null} */}
+        {this.state.list[0] && <List newlist={this.state} />}
       </>
     );
   }
